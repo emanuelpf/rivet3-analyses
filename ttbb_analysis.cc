@@ -85,7 +85,7 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(neutrinos);
 
       // FastJets jets(vfs, FastJets::ANTIKT, 0.4);
-      FastJets jetfs(fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
+      FastJets jets(vfs, FastJets::ANTIKT, 0.4, JetAlg::Muons::DECAY, JetAlg::Invisibles::DECAY);
       declare(jets, "jets");
 
       // missing momentum
