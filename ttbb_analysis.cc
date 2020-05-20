@@ -39,7 +39,7 @@ namespace Rivet {
 
       Cut eta_full = (Cuts::abseta < 5.0);
       // Lepton cuts
-      Cut lep_cuts25 = (Cuts::abseta < 2.5) && (Cuts::pT >= 27*GeV);
+      Cut lep_cuts27 = (Cuts::abseta < 2.5) && (Cuts::pT >= 27*GeV);
       // All final state particles
       FinalState fs(eta_full);
 
@@ -64,10 +64,10 @@ namespace Rivet {
       //Cut lepton_cuts = Cuts::abseta < 2.5 && Cuts::pT > 20*GeV;
       //DressedLeptons dressed_leps(photons, bare_leps, 0.1, lepton_cuts);
       //declare(dressed_leps, "leptons");
-      DressedLeptons dressedelectrons25(photons, electrons, 0.1, lep_cuts25, true);
-      DressedLeptons dressedmuons25(photons, muons, 0.1, lep_cuts25, true);
-      declare(dressedelectrons25, "elecs");
-      declare(dressedmuons25, "muons");
+      DressedLeptons dressedelectrons27(photons, electrons, 0.1, lep_cuts27, true);
+      DressedLeptons dressedmuons27(photons, muons, 0.1, lep_cuts27, true);
+      declare(dressedelectrons27, "elecs");
+      declare(dressedmuons27, "muons");
 
       // From here on we are just setting up the jet clustering
       IdentifiedFinalState nu_id;
@@ -84,11 +84,12 @@ namespace Rivet {
       vfs.addVetoOnThisFinalState(all_dressed_muons);
       vfs.addVetoOnThisFinalState(neutrinos);
 
-      FastJets jets(vfs, FastJets::ANTIKT, 0.4);
+      // FastJets jets(vfs, FastJets::ANTIKT, 0.4);
+      FastJets jetfs(fs, FastJets::ANTIKT, 0.4, JetAlg::Muons::NONE, JetAlg::Invisibles::NONE);
       declare(jets, "jets");
 
       // missing momentum
-      //declare(MissingMomentum(fs), "MET");
+      // declare(MissingMomentum(fs), "MET");
 
       vector<double> genNjets                     = {2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5};
       vector<double> genNbjets                    = {2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5};
@@ -194,12 +195,12 @@ namespace Rivet {
       // if (apply<MissingMomentum>(event, "MET").missingPt() < 30*GeV)  vetoEvent;
       bool pass_ljets = (leptons.size() == 1 && leptons[0].pT() > 27*GeV);
       if (!pass_ljets) vetoEvent;
-      cout << "##################### BEGIN EVENT INFOS #####################\n";
-      cout << "Number of leptons " << leptons.size() << endl;
-      cout << "lepton p_T " << leptons[0].pT() << endl;
-      cout << "nbjets " << nbjets << endl;
-      cout << "njets " << njets << endl;
-      cout << "##################### END EVENT INFOS   #####################\n";
+      // cout << "##################### BEGIN EVENT INFOS #####################\n";
+      // cout << "Number of leptons " << leptons.size() << endl;
+      // cout << "lepton p_T " << leptons[0].pT() << endl;
+      // cout << "nbjets " << nbjets << endl;
+      // cout << "njets " << njets << endl;
+      // cout << "##################### END EVENT INFOS   #####################\n";
       if (pass_ljets && (nbjets < 3 || njets < 4))  vetoEvent;
 
       // fill histogram with leading b-jet pT
@@ -231,7 +232,7 @@ namespace Rivet {
      
       // lets do the 3bjets geq4njets category first
       if (pass_ljets && (nbjets == 3 && njets >= 4)) {
-          cout << "##################### nbjets == 3 && njets >= 4) ######\n";
+          //cout << "##################### nbjets == 3 && njets >= 4) ######\n";
           _h["N_Jets_3b_geq4j_ljets"]               -> fill(njets);
           _h["N_b_Jets_3b_geq4j_ljets"]             -> fill(nbjets);
           for (size_t i = 0; i < bjets.size(); ++i) {
@@ -261,7 +262,7 @@ namespace Rivet {
       }
       // lets do the geq4bjets geq4njets category now
       if (pass_ljets && (nbjets >= 4 && njets >= 4)) {
-          cout << "##################### PASSED (nbjets >= 4 && njets >= 4) ######\n";
+          //cout << "##################### PASSED (nbjets >= 4 && njets >= 4) ######\n";
           _h["N_Jets_geq4b_geq4j_ljets"]            -> fill(njets);
           _h["N_b_Jets_geq4b_geq4j_ljets"]          -> fill(nbjets);
           for (size_t i = 0; i < bjets.size(); ++i) {
@@ -300,7 +301,7 @@ namespace Rivet {
       const double sf = crossSection() / picobarn / sumOfWeights();
       for (auto const& h : _h) {
           scale(h.second, sf);
-          normalize(h.second, 1.0);
+          // normalize(h.second, 1.0);
       }
 
     }
