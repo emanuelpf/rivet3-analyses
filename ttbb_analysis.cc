@@ -195,12 +195,6 @@ namespace Rivet {
       // if (apply<MissingMomentum>(event, "MET").missingPt() < 30*GeV)  vetoEvent;
       bool pass_ljets = (leptons.size() == 1 && leptons[0].pT() > 27*GeV);
       if (!pass_ljets) vetoEvent;
-      // cout << "##################### BEGIN EVENT INFOS #####################\n";
-      // cout << "Number of leptons " << leptons.size() << endl;
-      // cout << "lepton p_T " << leptons[0].pT() << endl;
-      // cout << "nbjets " << nbjets << endl;
-      // cout << "njets " << njets << endl;
-      // cout << "##################### END EVENT INFOS   #####################\n";
       if (pass_ljets && (nbjets < 3 || njets < 4))  vetoEvent;
 
       // fill histogram with leading b-jet pT
@@ -232,7 +226,6 @@ namespace Rivet {
      
       // lets do the 3bjets geq4njets category first
       if (pass_ljets && (nbjets == 3 && njets >= 4)) {
-          //cout << "##################### nbjets == 3 && njets >= 4) ######\n";
           _h["N_Jets_3b_geq4j_ljets"]               -> fill(njets);
           _h["N_b_Jets_3b_geq4j_ljets"]             -> fill(nbjets);
           for (size_t i = 0; i < bjets.size(); ++i) {
@@ -262,7 +255,6 @@ namespace Rivet {
       }
       // lets do the geq4bjets geq4njets category now
       if (pass_ljets && (nbjets >= 4 && njets >= 4)) {
-          //cout << "##################### PASSED (nbjets >= 4 && njets >= 4) ######\n";
           _h["N_Jets_geq4b_geq4j_ljets"]            -> fill(njets);
           _h["N_b_Jets_geq4b_geq4j_ljets"]          -> fill(nbjets);
           for (size_t i = 0; i < bjets.size(); ++i) {
