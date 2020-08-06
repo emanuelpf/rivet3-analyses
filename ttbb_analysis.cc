@@ -91,61 +91,62 @@ namespace Rivet {
       // missing momentum
       // declare(MissingMomentum(fs), "MET");
 
-      vector<double> genNjets                     = {2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5};
-      vector<double> genNbjets                    = {2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5};
-      vector<double> genJetPt                     = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350, 360, 370, 380, 390, 400, 410, 420, 430, 440, 450, 460, 470, 480, 490, 500};
-      vector<double> genbjetspt                   = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400, 450, 500};
-      vector<double> genHTjets                    = {0.00000, 34.09091, 68.18182, 102.27275, 136.36365, 170.45455, 204.54545, 238.63635, 272.72725, 306.81815, 340.90905, 375.00005, 409.09095, 443.18185, 477.27275, 511.36365, 545.45455, 579.54545, 613.63635, 647.72725, 681.81815, 715.90905, 750.00005, 784.09095, 818.18185, 852.27275, 886.36365, 920.45455, 954.54545, 988.63655, 1022.72755, 1056.81855, 1090.90955, 1124.99955, 1159.09055, 1193.18155, 1227.27255, 1261.36355, 1295.45455, 1329.54555, 1363.63655, 1397.72755, 1431.81855, 1465.90955, 1500.00045};
-      vector<double> genEvt_M_MinDeltaRGenBJets   = {0.000, 15.625, 31.250, 46.875, 62.500, 78.125, 93.750, 109.375, 125.000, 140.625, 156.250, 171.875, 187.500, 203.125, 218.750, 234.375, 250.000, 265.625, 281.250, 296.875, 312.500, 328.125, 343.750, 359.375, 375.000, 390.625, 406.250, 421.875, 437.500, 453.125, 468.750, 484.375, 500.000};
-      vector<double> genEvt_M_HardestGenBJets     = {0.000, 15.625, 31.250, 46.875, 62.500, 78.125, 93.750, 109.375, 125.000, 140.625, 156.250, 171.875, 187.500, 203.125, 218.750, 234.375, 250.000, 265.625, 281.250, 296.875, 312.500, 328.125, 343.750, 359.375, 375.000, 390.625, 406.250, 421.875, 437.500, 453.125, 468.750, 484.375, 500.000};
-      vector<double> genEvt_Dr_MinDeltaRGenBJets  = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0};
-      vector<double> genEvt_Dr_HardestGenBJets    = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0};
+      vector<double> multiplicity_bins    = {2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5};
+      vector<double> pt_bins              = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400, 500};
+      vector<double> ht_bins              = {0, 50, 100, 135, 170, 205, 240, 275, 310, 345, 380, 415, 450, 485, 520, 555, 590, 625, 660, 695, 730, 765, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1300, 1400, 1500};
+      vector<double> m_leading_bins       = {0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345, 360, 375, 390, 405, 420, 435, 450, 480, 510, 540, 570, 600};
+      vector<double> m_closest_bins       = {0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 270, 300, 330, 360, 390, 450, 510};
+      vector<double> dr_bins              = {0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2, 3.4, 3.6, 3.8, 4.0, 4.4, 4.8, 5.2, 5.6, 6.0};
 
       // Book histograms
       // specify custom binning
       // 3b geq4j category 
-      book(_h["N_Jets_3b_geq4j_ljets"],              "N_Jets_3b_geq4j_ljets"              , genNjets);
-      book(_h["N_b_Jets_3b_geq4j_ljets"],            "N_b_Jets_3b_geq4j_ljets"            , genNbjets);
-      book(_h["all_bjets_pt_3b_geq4j_ljets"],        "all_bjets_pt_3b_geq4j_ljets"        , genbjetspt);
+      book(_h["N_Jets_3b_geq4j_ljets"],              "N_Jets_3b_geq4j_ljets"              , multiplicity_bins);
+      book(_h["N_b_Jets_3b_geq4j_ljets"],            "N_b_Jets_3b_geq4j_ljets"            , multiplicity_bins);
+      book(_h["all_bjets_pt_3b_geq4j_ljets"],        "all_bjets_pt_3b_geq4j_ljets"        , pt_bins);
 
-      book(_h["ht_bjets_3b_geq4j_ljets"],            "ht_bjets_3b_geq4j_ljets"            , genHTjets); 
-      book(_h["ht_3b_geq4j_ljets"],                  "ht_3b_geq4j_ljets"                  , genHTjets); 
-      book(_h["ht_had_3b_geq4j_ljets"],              "ht_had_3b_geq4j_ljets"              , genHTjets);
+      book(_h["ht_bjets_3b_geq4j_ljets"],            "ht_bjets_3b_geq4j_ljets"            , ht_bins); 
+      book(_h["ht_3b_geq4j_ljets"],                  "ht_3b_geq4j_ljets"                  , ht_bins); 
+      book(_h["ht_had_3b_geq4j_ljets"],              "ht_had_3b_geq4j_ljets"              , ht_bins);
 
-      book(_h["lead_bjet_pt_3b_geq4j_ljets"],        "lead_bjet_pt_3b_geq4j_ljets"        , genJetPt);
-      book(_h["sublead_bjet_pt_3b_geq4j_ljets"],     "sublead_bjet_pt_3b_geq4j_ljets"     , genJetPt);
-      book(_h["third_bjet_pt_3b_geq4j_ljets"],       "third_bjet_pt_3b_geq4j_ljets"       , genJetPt);
-      book(_h["fourth_bjet_pt_3b_geq4j_ljets"],      "fourth_bjet_pt_3b_geq4j_ljets"      , genJetPt);
+      book(_h["lead_bjet_pt_3b_geq4j_ljets"],        "lead_bjet_pt_3b_geq4j_ljets"        , pt_bins);
+      book(_h["sublead_bjet_pt_3b_geq4j_ljets"],     "sublead_bjet_pt_3b_geq4j_ljets"     , pt_bins);
+      book(_h["third_bjet_pt_3b_geq4j_ljets"],       "third_bjet_pt_3b_geq4j_ljets"       , pt_bins);
+      book(_h["fourth_bjet_pt_3b_geq4j_ljets"],      "fourth_bjet_pt_3b_geq4j_ljets"      , pt_bins);
 
-      book(_h["m_bb_leading_3b_geq4j_ljets"],        "m_bb_leading_3b_geq4j_ljets"        , genEvt_M_HardestGenBJets);
-      book(_h["pt_bb_leading_3b_geq4j_ljets"],       "pt_bb_leading_3b_geq4j_ljets"       , genJetPt);
-      book(_h["dR_bb_leading_3b_geq4j_ljets"],       "dR_bb_leading_3b_geq4j_ljets"       , genEvt_Dr_HardestGenBJets);
+      book(_h["m_bb_leading_3b_geq4j_ljets"],        "m_bb_leading_3b_geq4j_ljets"        , m_leading_bins);
+      book(_h["pt_bb_leading_3b_geq4j_ljets"],       "pt_bb_leading_3b_geq4j_ljets"       , pt_bins);
+      book(_h["dR_bb_leading_3b_geq4j_ljets"],       "dR_bb_leading_3b_geq4j_ljets"       , dr_bins);
 
-      book(_h["m_bb_closest_3b_geq4j_ljets"],        "m_bb_closest_3b_geq4j_ljets"        , genEvt_M_MinDeltaRGenBJets);
-      book(_h["pt_bb_closest_3b_geq4j_ljets"],       "pt_bb_closest_3b_geq4j_ljets"       , genJetPt);
-      book(_h["dR_bb_closest_3b_geq4j_ljets"],       "dR_bb_closest_3b_geq4j_ljets"       , genEvt_Dr_MinDeltaRGenBJets);
+      book(_h["m_bb_closest_3b_geq4j_ljets"],        "m_bb_closest_3b_geq4j_ljets"        , m_closest_bins);
+      book(_h["pt_bb_closest_3b_geq4j_ljets"],       "pt_bb_closest_3b_geq4j_ljets"       , pt_bins);
+      book(_h["dR_bb_closest_3b_geq4j_ljets"],       "dR_bb_closest_3b_geq4j_ljets"       , dr_bins);
+
+      book(_h["dR_bb_average_3b_geq4j_ljets"],       "dR_bb_average_3b_geq4j_ljets"       , dr_bins);
 
       // geq4b geq4j category 
-      book(_h["N_Jets_geq4b_geq4j_ljets"],           "N_Jets_geq4b_geq4j_ljets"           , genNjets);
-      book(_h["N_b_Jets_geq4b_geq4j_ljets"],         "N_b_Jets_geq4b_geq4j_ljets"         , genNbjets);
-      book(_h["all_bjets_pt_geq4b_geq4j_ljets"],     "all_bjets_pt_geq4b_geq4j_ljets"     , genbjetspt);
+      book(_h["N_Jets_geq4b_geq4j_ljets"],           "N_Jets_geq4b_geq4j_ljets"           , multiplicity_bins);
+      book(_h["N_b_Jets_geq4b_geq4j_ljets"],         "N_b_Jets_geq4b_geq4j_ljets"         , multiplicity_bins);
+      book(_h["all_bjets_pt_geq4b_geq4j_ljets"],     "all_bjets_pt_geq4b_geq4j_ljets"     , pt_bins);
 
-      book(_h["ht_bjets_geq4b_geq4j_ljets"],         "ht_bjets_geq4b_geq4j_ljets"         , genHTjets); 
-      book(_h["ht_geq4b_geq4j_ljets"],               "ht_geq4b_geq4j_ljets"               , genHTjets); 
-      book(_h["ht_had_geq4b_geq4j_ljets"],           "ht_had_geq4b_geq4j_ljets"           , genHTjets);
+      book(_h["ht_bjets_geq4b_geq4j_ljets"],         "ht_bjets_geq4b_geq4j_ljets"         , ht_bins); 
+      book(_h["ht_geq4b_geq4j_ljets"],               "ht_geq4b_geq4j_ljets"               , ht_bins); 
+      book(_h["ht_had_geq4b_geq4j_ljets"],           "ht_had_geq4b_geq4j_ljets"           , ht_bins);
 
-      book(_h["lead_bjet_pt_geq4b_geq4j_ljets"],     "lead_bjet_pt_geq4b_geq4j_ljets"     , genJetPt);
-      book(_h["sublead_bjet_pt_geq4b_geq4j_ljets"],  "sublead_bjet_pt_geq4b_geq4j_ljets"  , genJetPt);
-      book(_h["third_bjet_pt_geq4b_geq4j_ljets"],    "third_bjet_pt_geq4b_geq4j_ljets"    , genJetPt);
-      book(_h["fourth_bjet_pt_geq4b_geq4j_ljets"],   "fourth_bjet_pt_geq4b_geq4j_ljets"   , genJetPt);
+      book(_h["lead_bjet_pt_geq4b_geq4j_ljets"],     "lead_bjet_pt_geq4b_geq4j_ljets"     , pt_bins);
+      book(_h["sublead_bjet_pt_geq4b_geq4j_ljets"],  "sublead_bjet_pt_geq4b_geq4j_ljets"  , pt_bins);
+      book(_h["third_bjet_pt_geq4b_geq4j_ljets"],    "third_bjet_pt_geq4b_geq4j_ljets"    , pt_bins);
+      book(_h["fourth_bjet_pt_geq4b_geq4j_ljets"],   "fourth_bjet_pt_geq4b_geq4j_ljets"   , pt_bins);
 
-      book(_h["m_bb_leading_geq4b_geq4j_ljets"],     "m_bb_leading_geq4b_geq4j_ljets"     , genEvt_M_HardestGenBJets);
-      book(_h["pt_bb_leading_geq4b_geq4j_ljets"],    "pt_bb_leading_geq4b_geq4j_ljets"    , genJetPt);
-      book(_h["dR_bb_leading_geq4b_geq4j_ljets"],    "dR_bb_leading_geq4b_geq4j_ljets"    , genEvt_Dr_HardestGenBJets);
+      book(_h["m_bb_leading_geq4b_geq4j_ljets"],     "m_bb_leading_geq4b_geq4j_ljets"     , m_leading_bins);
+      book(_h["pt_bb_leading_geq4b_geq4j_ljets"],    "pt_bb_leading_geq4b_geq4j_ljets"    , pt_bins);
+      book(_h["dR_bb_leading_geq4b_geq4j_ljets"],    "dR_bb_leading_geq4b_geq4j_ljets"    , dr_bins);
 
-      book(_h["m_bb_closest_geq4b_geq4j_ljets"],     "m_bb_closest_geq4b_geq4j_ljets"     , genEvt_M_MinDeltaRGenBJets);
-      book(_h["pt_bb_closest_geq4b_geq4j_ljets"],    "pt_bb_closest_geq4b_geq4j_ljets"    , genJetPt);
-      book(_h["dR_bb_closest_geq4b_geq4j_ljets"],    "dR_bb_closest_geq4b_geq4j_ljets"    , genEvt_Dr_MinDeltaRGenBJets);
+      book(_h["m_bb_closest_geq4b_geq4j_ljets"],     "m_bb_closest_geq4b_geq4j_ljets"     , m_closest_bins);
+      book(_h["pt_bb_closest_geq4b_geq4j_ljets"],    "pt_bb_closest_geq4b_geq4j_ljets"    , pt_bins);
+      book(_h["dR_bb_closest_geq4b_geq4j_ljets"],    "dR_bb_closest_geq4b_geq4j_ljets"    , dr_bins);
+
+      book(_h["dR_bb_average_geq4b_geq4j_ljets"],    "dR_bb_average_geq4b_geq4j_ljets"    , dr_bins);
 
 
       // book(_h["XXXX"], "myh1", 20, 0.0, 100.0);
@@ -205,6 +206,8 @@ namespace Rivet {
       FourMomentum jsum = bjets[0].momentum() + bjets[1].momentum();
       double dr_leading = deltaR(bjets[0], bjets[1]);
       size_t ind1, ind2; double mindr = 999.;
+      double sum_dr  = 0.0;
+      size_t sum_n_dr = 0; 
       for (size_t i = 0; i < bjets.size(); ++i) {
         for (size_t j = 0; j < bjets.size(); ++j) {
           if (i == j)  continue;
@@ -214,8 +217,11 @@ namespace Rivet {
             ind2 = j;
             mindr = dr;
           }
+          sum_dr += dr;
+          sum_n_dr += 1; 
         }
       }
+
       double ht_bjets = 0;
       for (size_t i = 0; i < bjets.size(); ++i) {
           ht_bjets = ht_bjets + bjets[i].pT();
@@ -236,9 +242,7 @@ namespace Rivet {
           _h["lead_bjet_pt_3b_geq4j_ljets"]         -> fill(bjets[0].pT()/GeV);
           _h["sublead_bjet_pt_3b_geq4j_ljets"]      -> fill(bjets[1].pT()/GeV);
           _h["third_bjet_pt_3b_geq4j_ljets"]        -> fill(bjets[2].pT()/GeV);
-          if (nbjets >= 4) { 
-              _h["fourth_bjet_pt_3b_geq4j_ljets"]   -> fill(bjets[3].pT()/GeV);
-          }
+
           // HT
           _h["ht_3b_geq4j_ljets"]                   -> fill(ht/GeV);
           _h["ht_had_3b_geq4j_ljets"]               -> fill(hthad/GeV);
@@ -252,6 +256,9 @@ namespace Rivet {
           _h["m_bb_closest_3b_geq4j_ljets"]         -> fill(bb_closest.mass()/GeV);
           _h["pt_bb_closest_3b_geq4j_ljets"]        -> fill(bb_closest.pT()/GeV);
           _h["dR_bb_closest_3b_geq4j_ljets"]        -> fill(dr_closest);
+
+          // average dR
+          _h["dR_bb_average_3b_geq4j_ljets"]        -> fill(sum_dr/sum_n_dr);
       }
       // lets do the geq4bjets geq4njets category now
       if (pass_ljets && (nbjets >= 4 && njets >= 4)) {
@@ -280,6 +287,9 @@ namespace Rivet {
           _h["m_bb_closest_geq4b_geq4j_ljets"]      -> fill(bb_closest.mass()/GeV);
           _h["pt_bb_closest_geq4b_geq4j_ljets"]     -> fill(bb_closest.pT()/GeV);
           _h["dR_bb_closest_geq4b_geq4j_ljets"]     -> fill(dr_closest);
+
+          // average dR
+          _h["dR_bb_average_geq4b_geq4j_ljets"]     -> fill(sum_dr/sum_n_dr);
       }
 
     }
@@ -293,9 +303,11 @@ namespace Rivet {
       const double sf = crossSection() / picobarn / sumOfWeights();
       for (auto const& h : _h) {
           scale(h.second, sf);
+          for (size_t i =0; i < h.second -> numBins(); i++) {
+            h.second -> bin(i).scaleW(1/h.second -> bin(i).width());
+          }
           // normalize(h.second, 1.0);
       }
-
     }
 
     //@}
