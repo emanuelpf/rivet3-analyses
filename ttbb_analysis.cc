@@ -124,6 +124,11 @@ namespace Rivet {
 
       book(_h["dR_bb_average_3b_geq4j_ljets"],       "dR_bb_average_3b_geq4j_ljets"       , dr_bins);
 
+      book(_h["m_bb_leadingVec_3b_geq4j_ljets"],     "m_bb_leadingVec_3b_geq4j_ljets"     , m_leading_bins);
+      book(_h["pt_bb_leadingVec_3b_geq4j_ljets"],    "pt_bb_leadingVec_3b_geq4j_ljets"    , pt_bins);
+      book(_h["dR_bb_leadingVec_3b_geq4j_ljets"],    "dR_bb_leadingVec_3b_geq4j_ljets"    , dr_bins);
+
+
       // geq4b geq4j category 
       book(_h["N_Jets_geq4b_geq4j_ljets"],           "N_Jets_geq4b_geq4j_ljets"           , multiplicity_bins);
       book(_h["N_b_Jets_geq4b_geq4j_ljets"],         "N_b_Jets_geq4b_geq4j_ljets"         , multiplicity_bins);
@@ -147,6 +152,11 @@ namespace Rivet {
       book(_h["dR_bb_closest_geq4b_geq4j_ljets"],    "dR_bb_closest_geq4b_geq4j_ljets"    , dr_bins);
 
       book(_h["dR_bb_average_geq4b_geq4j_ljets"],    "dR_bb_average_geq4b_geq4j_ljets"    , dr_bins);
+
+      book(_h["m_bb_leadingVec_geq4b_geq4j_ljets"],  "m_bb_leadingVec_geq4b_geq4j_ljets"     , m_leading_bins);
+      book(_h["pt_bb_leadingVec_geq4b_geq4j_ljets"], "pt_bb_leadingVec_geq4b_geq4j_ljets"    , pt_bins);
+      book(_h["dR_bb_leadingVec_geq4b_geq4j_ljets"], "dR_bb_leadingVec_geq4b_geq4j_ljets"    , dr_bins);
+
 
 
       // book(_h["XXXX"], "myh1", 20, 0.0, 100.0);
@@ -206,17 +216,31 @@ namespace Rivet {
       FourMomentum jsum = bjets[0].momentum() + bjets[1].momentum();
       double dr_leading = deltaR(bjets[0], bjets[1]);
       size_t ind1, ind2; double mindr = 999.;
-      double sum_dr  = 0.0;
+      size_t ind1_vec, ind2_vec;
+      double vec_pt = 0.0;
+      double sum_dr = 0.0;
       size_t sum_n_dr = 0; 
       for (size_t i = 0; i < bjets.size(); ++i) {
         for (size_t j = 0; j < bjets.size(); ++j) {
           if (i == j)  continue;
           double dr = deltaR(bjets[i], bjets[j]);
+
+	  double pt = (bjets[i].momentum()+bjets[j].momentum()).pT();
+
           if (dr < mindr) {
             ind1 = i;
             ind2 = j;
             mindr = dr;
           }
+	  if (pt > vec_pt){
+
+	    ind1_vec = i;
+	    ind2_vec = j;
+
+	    vec_pt = pt;
+
+	  }
+	  
           sum_dr += dr;
           sum_n_dr += 1; 
         }
@@ -230,6 +254,10 @@ namespace Rivet {
       FourMomentum bb_closest = bjets[ind1].momentum() + bjets[ind2].momentum();
       double dr_closest = deltaR(bjets[ind1], bjets[ind2]);
      
+      double dr_leading_vec = deltaR(bjets[ind1_vec], bjets[ind2_vec]);
+      double pt_leading_vec = (bjets[ind1_vec].momentum()+bjets[ind2_vec].momentum()).pT();
+      double m_leading_vec  = (bjets[ind1_vec].momentum()+bjets[ind2_vec].momentum()).mass();
+
       // lets do the 3bjets geq4njets category first
       if (pass_ljets && (nbjets == 3 && njets >= 4)) {
           _h["N_Jets_3b_geq4j_ljets"]               -> fill(njets);
@@ -256,6 +284,11 @@ namespace Rivet {
           _h["m_bb_closest_3b_geq4j_ljets"]         -> fill(bb_closest.mass()/GeV);
           _h["pt_bb_closest_3b_geq4j_ljets"]        -> fill(bb_closest.pT()/GeV);
           _h["dR_bb_closest_3b_geq4j_ljets"]        -> fill(dr_closest);
+
+	  // bb pair with highest vectorial sum pt                                            
+          _h["m_bb_leadingVec_3b_geq4j_ljets"]         -> fill(m_leading_vec/GeV);
+          _h["pt_bb_leadingVec_3b_geq4j_ljets"]        -> fill(pt_leading_vec/GeV);
+          _h["dR_bb_leadingVec_3b_geq4j_ljets"]        -> fill(dr_leading_vec);
 
           // average dR
           _h["dR_bb_average_3b_geq4j_ljets"]        -> fill(sum_dr/sum_n_dr);
@@ -287,6 +320,12 @@ namespace Rivet {
           _h["m_bb_closest_geq4b_geq4j_ljets"]      -> fill(bb_closest.mass()/GeV);
           _h["pt_bb_closest_geq4b_geq4j_ljets"]     -> fill(bb_closest.pT()/GeV);
           _h["dR_bb_closest_geq4b_geq4j_ljets"]     -> fill(dr_closest);
+
+          // bb pair with highest vectorial sum pt                                                                                                                                                        
+          _h["m_bb_leadingVec_geq4b_geq4j_ljets"]   -> fill(m_leading_vec/GeV);
+          _h["pt_bb_leadingVec_geq4b_geq4j_ljets"]  -> fill(pt_leading_vec/GeV);
+          _h["dR_bb_leadingVec_geq4b_geq4j_ljets"]  -> fill(dr_leading_vec);
+
 
           // average dR
           _h["dR_bb_average_geq4b_geq4j_ljets"]     -> fill(sum_dr/sum_n_dr);
