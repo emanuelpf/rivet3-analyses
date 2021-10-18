@@ -245,29 +245,29 @@ namespace Rivet {
       book(_h["dR_bb_leadingVec_geq4b_geq4j_dil"], "dR_bb_leadingVec_geq4b_geq4j_dil"    , dr_bins);
 
       // (abs) weight histos
-      book(_h["abs_weight_1000_3b_geq5j_ljets"],    "abs_weight_1000_3b_geq5j_ljets",    1400, 0.0, 1400.0);
-      book(_h["abs_weight_1000_geq4b_geq5j_ljets"], "abs_weight_1000_geq4b_geq5j_ljets", 1400, 0.0, 1400.0);
-      book(_h["abs_weight_1000_geq4b_geq6j_ljets"], "abs_weight_1000_geq4b_geq6j_ljets", 1400, 0.0, 1400.0);
-      book(_h["abs_weight_1000_3b_geq4j_dil"],      "abs_weight_1000_3b_geq4j_dil",      1400, 0.0, 1400.0);
-      book(_h["abs_weight_1000_geq4b_geq4j_dil"],   "abs_weight_1000_geq4b_geq4j_dil",   1400, 0.0, 1400.0);
+      // book(_h["abs_weight_1000_3b_geq5j_ljets"],    "abs_weight_1000_3b_geq5j_ljets",    1400, 0.0, 1400.0);
+      // book(_h["abs_weight_1000_geq4b_geq5j_ljets"], "abs_weight_1000_geq4b_geq5j_ljets", 1400, 0.0, 1400.0);
+      // book(_h["abs_weight_1000_geq4b_geq6j_ljets"], "abs_weight_1000_geq4b_geq6j_ljets", 1400, 0.0, 1400.0);
+      // book(_h["abs_weight_1000_3b_geq4j_dil"],      "abs_weight_1000_3b_geq4j_dil",      1400, 0.0, 1400.0);
+      // book(_h["abs_weight_1000_geq4b_geq4j_dil"],   "abs_weight_1000_geq4b_geq4j_dil",   1400, 0.0, 1400.0);
 
-      book(_h["abs_weight_100_3b_geq5j_ljets"],     "abs_weight_100_3b_geq5j_ljets",      100, 0.0, 100.0);
-      book(_h["abs_weight_100_geq4b_geq5j_ljets"],  "abs_weight_100_geq4b_geq5j_ljets",   100, 0.0, 100.0);
-      book(_h["abs_weight_100_geq4b_geq6j_ljets"],  "abs_weight_100_geq4b_geq6j_ljets",   100, 0.0, 100.0);
-      book(_h["abs_weight_100_3b_geq4j_dil"],       "abs_weight_100_3b_geq4j_dil",        100, 0.0, 100.0);
-      book(_h["abs_weight_100_geq4b_geq4j_dil"],    "abs_weight_100_geq4b_geq4j_dil",     100, 0.0, 100.0);
+      // book(_h["abs_weight_100_3b_geq5j_ljets"],     "abs_weight_100_3b_geq5j_ljets",      100, 0.0, 100.0);
+      // book(_h["abs_weight_100_geq4b_geq5j_ljets"],  "abs_weight_100_geq4b_geq5j_ljets",   100, 0.0, 100.0);
+      // book(_h["abs_weight_100_geq4b_geq6j_ljets"],  "abs_weight_100_geq4b_geq6j_ljets",   100, 0.0, 100.0);
+      // book(_h["abs_weight_100_3b_geq4j_dil"],       "abs_weight_100_3b_geq4j_dil",        100, 0.0, 100.0);
+      // book(_h["abs_weight_100_geq4b_geq4j_dil"],    "abs_weight_100_geq4b_geq4j_dil",     100, 0.0, 100.0);
 
-      book(_h["abs_weight_5_3b_geq5j_ljets"],       "abs_weight_5_3b_geq5j_ljets",          5, 0.0, 5.0);
-      book(_h["abs_weight_5_geq4b_geq5j_ljets"],    "abs_weight_5_geq4b_geq5j_ljets",       5, 0.0, 5.0);
-      book(_h["abs_weight_5_geq4b_geq6j_ljets"],    "abs_weight_5_geq4b_geq6j_ljets",       5, 0.0, 5.0);
-      book(_h["abs_weight_5_3b_geq4j_dil"],         "abs_weight_5_3b_geq4j_dil",            5, 0.0, 5.0);
-      book(_h["abs_weight_5_geq4b_geq4j_dil"],      "abs_weight_5_geq4b_geq4j_dil",         5, 0.0, 5.0);
+      // book(_h["abs_weight_5_3b_geq5j_ljets"],       "abs_weight_5_3b_geq5j_ljets",          5, 0.0, 5.0);
+      // book(_h["abs_weight_5_geq4b_geq5j_ljets"],    "abs_weight_5_geq4b_geq5j_ljets",       5, 0.0, 5.0);
+      // book(_h["abs_weight_5_geq4b_geq6j_ljets"],    "abs_weight_5_geq4b_geq6j_ljets",       5, 0.0, 5.0);
+      // book(_h["abs_weight_5_3b_geq4j_dil"],         "abs_weight_5_3b_geq4j_dil",            5, 0.0, 5.0);
+      // book(_h["abs_weight_5_geq4b_geq4j_dil"],      "abs_weight_5_geq4b_geq4j_dil",         5, 0.0, 5.0);
 
-      book(_h["weight_sign_3b_geq5j_ljets"],        "weight_sign_3b_geq5j_ljets",           2, -1.0, 1.0);
-      book(_h["weight_sign_geq4b_geq5j_ljets"],     "weight_sign_geq4b_geq5j_ljets",        2, -1.0, 1.0);
-      book(_h["weight_sign_geq4b_geq6j_ljets"],     "weight_sign_geq4b_geq6j_ljets",        2, -1.0, 1.0);
-      book(_h["weight_sign_3b_geq4j_dil"],          "weight_sign_3b_geq4j_dil",             2, -1.0, 1.0);
-      book(_h["weight_sign_geq4b_geq4j_dil"],       "weight_sign_geq4b_geq4j_dil",          2, -1.0, 1.0);
+      // book(_h["weight_sign_3b_geq5j_ljets"],        "weight_sign_3b_geq5j_ljets",           2, -1.0, 1.0);
+      // book(_h["weight_sign_geq4b_geq5j_ljets"],     "weight_sign_geq4b_geq5j_ljets",        2, -1.0, 1.0);
+      // book(_h["weight_sign_geq4b_geq6j_ljets"],     "weight_sign_geq4b_geq6j_ljets",        2, -1.0, 1.0);
+      // book(_h["weight_sign_3b_geq4j_dil"],          "weight_sign_3b_geq4j_dil",             2, -1.0, 1.0);
+      // book(_h["weight_sign_geq4b_geq4j_dil"],       "weight_sign_geq4b_geq4j_dil",          2, -1.0, 1.0);
     }
 
 
@@ -395,10 +395,10 @@ namespace Rivet {
           // average dR
           _h["dR_bb_average_3b_geq5j_ljets"]        -> fill(sum_dr/sum_n_dr);
 
-          _h["abs_weight_1000_3b_geq5j_ljets"] -> fill(event.weights()[0]);
-          _h["abs_weight_100_3b_geq5j_ljets"]  -> fill(event.weights()[0]);
-          _h["abs_weight_5_3b_geq5j_ljets"]    -> fill(event.weights()[0]);
-          _h["weight_sign_3b_geq5j_ljets"]     -> fill(event.weights()[0]);
+          // _h["abs_weight_1000_3b_geq5j_ljets"] -> fill(event.weights()[0]);
+          // _h["abs_weight_100_3b_geq5j_ljets"]  -> fill(event.weights()[0]);
+          // _h["abs_weight_5_3b_geq5j_ljets"]    -> fill(event.weights()[0]);
+          // _h["weight_sign_3b_geq5j_ljets"]     -> fill(event.weights()[0]);
       }
 
       // lets do the geq4bjets geq5njets category
@@ -438,10 +438,10 @@ namespace Rivet {
           // average dR
           _h["dR_bb_average_geq4b_geq5j_ljets"]     -> fill(sum_dr/sum_n_dr);
 
-          _h["abs_weight_1000_geq4b_geq5j_ljets"] -> fill(event.weights()[0]);
-          _h["abs_weight_100_geq4b_geq5j_ljets"]  -> fill(event.weights()[0]);
-          _h["abs_weight_5_geq4b_geq5j_ljets"]    -> fill(event.weights()[0]);
-          _h["weight_sign_geq4b_geq5j_ljets"]     -> fill(event.weights()[0]);
+          // _h["abs_weight_1000_geq4b_geq5j_ljets"] -> fill(event.weights()[0]);
+          // _h["abs_weight_100_geq4b_geq5j_ljets"]  -> fill(event.weights()[0]);
+          // _h["abs_weight_5_geq4b_geq5j_ljets"]    -> fill(event.weights()[0]);
+          // _h["weight_sign_geq4b_geq5j_ljets"]     -> fill(event.weights()[0]);
       }
 
       // lets do the geq4bjets geq6njets category now
@@ -481,10 +481,10 @@ namespace Rivet {
           // average dR
           _h["dR_bb_average_geq4b_geq6j_ljets"]     -> fill(sum_dr/sum_n_dr);
 
-          _h["abs_weight_1000_geq4b_geq6j_ljets"] -> fill(event.weights()[0]);
-          _h["abs_weight_100_geq4b_geq6j_ljets"]  -> fill(event.weights()[0]);
-          _h["abs_weight_5_geq4b_geq6j_ljets"]    -> fill(event.weights()[0]);
-          _h["weight_sign_geq4b_geq6j_ljets"]     -> fill(event.weights()[0]);
+          // _h["abs_weight_1000_geq4b_geq6j_ljets"] -> fill(event.weights()[0]);
+          // _h["abs_weight_100_geq4b_geq6j_ljets"]  -> fill(event.weights()[0]);
+          // _h["abs_weight_5_geq4b_geq6j_ljets"]    -> fill(event.weights()[0]);
+          // _h["weight_sign_geq4b_geq6j_ljets"]     -> fill(event.weights()[0]);
       }
       
       // dil
@@ -523,10 +523,10 @@ namespace Rivet {
         // average dR                                                                                                                                                                                     
         _h["dR_bb_average_3b_geq4j_dil"]        -> fill(sum_dr/sum_n_dr);
 
-        _h["abs_weight_1000_3b_geq4j_dil"] -> fill(event.weights()[0]);
-        _h["abs_weight_100_3b_geq4j_dil"]  -> fill(event.weights()[0]);
-        _h["abs_weight_5_3b_geq4j_dil"]    -> fill(event.weights()[0]);
-        _h["weight_sign_3b_geq4j_dil"]     -> fill(event.weights()[0]);
+        // _h["abs_weight_1000_3b_geq4j_dil"] -> fill(event.weights()[0]);
+        // _h["abs_weight_100_3b_geq4j_dil"]  -> fill(event.weights()[0]);
+        // _h["abs_weight_5_3b_geq4j_dil"]    -> fill(event.weights()[0]);
+        // _h["weight_sign_3b_geq4j_dil"]     -> fill(event.weights()[0]);
       }
 
       // lets do the geq4bjets geq4njets category now                                                                                                                                                     
@@ -566,10 +566,10 @@ namespace Rivet {
         // average dR                                                                                                                                                                                     
         _h["dR_bb_average_geq4b_geq4j_dil"]     -> fill(sum_dr/sum_n_dr);
 
-        _h["abs_weight_1000_geq4b_geq4j_dil"] -> fill(event.weights()[0]);
-        _h["abs_weight_100_geq4b_geq4j_dil"]  -> fill(event.weights()[0]);
-        _h["abs_weight_5_geq4b_geq4j_dil"]    -> fill(event.weights()[0]);
-        _h["weight_sign_geq4b_geq4j_dil"]     -> fill(event.weights()[0]);
+        // _h["abs_weight_1000_geq4b_geq4j_dil"] -> fill(event.weights()[0]);
+        // _h["abs_weight_100_geq4b_geq4j_dil"]  -> fill(event.weights()[0]);
+        // _h["abs_weight_5_geq4b_geq4j_dil"]    -> fill(event.weights()[0]);
+        // _h["weight_sign_geq4b_geq4j_dil"]     -> fill(event.weights()[0]);
       }
     }
 
