@@ -104,8 +104,10 @@ namespace Rivet {
       book(_h["N_Jets_3b_geq5j_ljets"],              "N_Jets_3b_geq5j_ljets"              , multiplicity_bins);
       book(_h["N_b_Jets_3b_geq5j_ljets"],            "N_b_Jets_3b_geq5j_ljets"            , multiplicity_bins);
       book(_h["all_bjets_pt_3b_geq5j_ljets"],        "all_bjets_pt_3b_geq5j_ljets"        , pt_bins);
+      book(_h["all_lfjets_pt_3b_geq5j_ljets"],       "all_lfjets_pt_3b_geq5j_ljets"       , pt_bins);
 
-      book(_h["ht_bjets_3b_geq5j_ljets"],            "ht_bjets_3b_geq5j_ljets"            , ht_bins); 
+      book(_h["ht_bjets_3b_geq5j_ljets"],            "ht_bjets_3b_geq5j_ljets"            , ht_bins);
+      book(_h["ht_lfjets_3b_geq5j_ljets"],           "ht_lfjets_3b_geq5j_ljets"           , ht_bins);  
       book(_h["ht_3b_geq5j_ljets"],                  "ht_3b_geq5j_ljets"                  , ht_bins); 
       book(_h["ht_had_3b_geq5j_ljets"],              "ht_had_3b_geq5j_ljets"              , ht_bins);
 
@@ -133,8 +135,10 @@ namespace Rivet {
       book(_h["N_Jets_geq4b_geq5j_ljets"],           "N_Jets_geq4b_geq5j_ljets"           , multiplicity_bins);
       book(_h["N_b_Jets_geq4b_geq5j_ljets"],         "N_b_Jets_geq4b_geq5j_ljets"         , multiplicity_bins);
       book(_h["all_bjets_pt_geq4b_geq5j_ljets"],     "all_bjets_pt_geq4b_geq5j_ljets"     , pt_bins);
+      book(_h["all_lfjets_pt_geq4b_geq5j_ljets"],    "all_lfjets_pt_geq4b_geq5j_ljets"    , pt_bins);
 
-      book(_h["ht_bjets_geq4b_geq5j_ljets"],         "ht_bjets_geq4b_geq5j_ljets"         , ht_bins); 
+      book(_h["ht_bjets_geq4b_geq5j_ljets"],         "ht_bjets_geq4b_geq5j_ljets"         , ht_bins);
+      book(_h["ht_lfjets_geq4b_geq5j_ljets"],        "ht_lfjets_geq4b_geq5j_ljets"        , ht_bins);  
       book(_h["ht_geq4b_geq5j_ljets"],               "ht_geq4b_geq5j_ljets"               , ht_bins); 
       book(_h["ht_had_geq4b_geq5j_ljets"],           "ht_had_geq4b_geq5j_ljets"           , ht_bins);
 
@@ -162,8 +166,10 @@ namespace Rivet {
       book(_h["N_Jets_geq4b_geq6j_ljets"],           "N_Jets_geq4b_geq6j_ljets"           , multiplicity_bins);
       book(_h["N_b_Jets_geq4b_geq6j_ljets"],         "N_b_Jets_geq4b_geq6j_ljets"         , multiplicity_bins);
       book(_h["all_bjets_pt_geq4b_geq6j_ljets"],     "all_bjets_pt_geq4b_geq6j_ljets"     , pt_bins);
+      book(_h["all_lfjets_pt_geq4b_geq6j_ljets"],    "all_lfjets_pt_geq4b_geq6j_ljets"    , pt_bins);
 
-      book(_h["ht_bjets_geq4b_geq6j_ljets"],         "ht_bjets_geq4b_geq6j_ljets"         , ht_bins); 
+      book(_h["ht_bjets_geq4b_geq6j_ljets"],         "ht_bjets_geq4b_geq6j_ljets"         , ht_bins);
+      book(_h["ht_lfjets_geq4b_geq6j_ljets"],        "ht_lfjets_geq4b_geq6j_ljets"        , ht_bins);  
       book(_h["ht_geq4b_geq6j_ljets"],               "ht_geq4b_geq6j_ljets"               , ht_bins); 
       book(_h["ht_had_geq4b_geq6j_ljets"],           "ht_had_geq4b_geq6j_ljets"           , ht_bins);
 
@@ -191,8 +197,10 @@ namespace Rivet {
       book(_h["N_Jets_3b_geq4j_dil"],              "N_Jets_3b_geq4j_dil"              , multiplicity_bins);
       book(_h["N_b_Jets_3b_geq4j_dil"],            "N_b_Jets_3b_geq4j_dil"            , multiplicity_bins);
       book(_h["all_bjets_pt_3b_geq4j_dil"],        "all_bjets_pt_3b_geq4j_dil"        , pt_bins);
+      book(_h["all_lfjets_pt_3b_geq4j_dil"],       "all_lfjets_pt_3b_geq4j_dil"       , pt_bins);
 
       book(_h["ht_bjets_3b_geq4j_dil"],            "ht_bjets_3b_geq4j_dil"            , ht_bins);
+      book(_h["ht_lfjets_3b_geq4j_dil"],           "ht_lfjets_3b_geq4j_dil"           , ht_bins);
       book(_h["ht_3b_geq4j_dil"],                  "ht_3b_geq4j_dil"                  , ht_bins);
       book(_h["ht_had_3b_geq4j_dil"],              "ht_had_3b_geq4j_dil"              , ht_bins);
 
@@ -220,8 +228,10 @@ namespace Rivet {
       book(_h["N_Jets_geq4b_geq4j_dil"],           "N_Jets_geq4b_geq4j_dil"           , multiplicity_bins);
       book(_h["N_b_Jets_geq4b_geq4j_dil"],         "N_b_Jets_geq4b_geq4j_dil"         , multiplicity_bins);
       book(_h["all_bjets_pt_geq4b_geq4j_dil"],     "all_bjets_pt_geq4b_geq4j_dil"     , pt_bins);
+      book(_h["all_lfjets_pt_geq4b_geq4j_dil"],    "all_lfjets_pt_geq4b_geq4j_dil"    , pt_bins);
 
       book(_h["ht_bjets_geq4b_geq4j_dil"],         "ht_bjets_geq4b_geq4j_dil"         , ht_bins);
+      book(_h["ht_lfjets_geq4b_geq4j_dil"],        "ht_lfjets_geq4b_geq4j_dil"        , ht_bins);
       book(_h["ht_geq4b_geq4j_dil"],               "ht_geq4b_geq4j_dil"               , ht_bins);
       book(_h["ht_had_geq4b_geq4j_dil"],           "ht_had_geq4b_geq4j_dil"           , ht_bins);
 
@@ -295,8 +305,10 @@ namespace Rivet {
       //   return  jet.bTagged(Cuts::pT > 5*GeV && Cuts::abseta < 2.5);
       // });
       Jets bjets;
+      Jets lfjets;
       for (const Jet& jet : jets) {
         if (jet.bTagged(Cuts::pT >= 5*GeV))  bjets += jet;
+        else lfjets += jet;
       }
 
       size_t njets = jets.size();
@@ -353,6 +365,11 @@ namespace Rivet {
           ht_bjets = ht_bjets + bjets[i].pT();
       }
 
+      double ht_lfjets = 0;
+      for (size_t i = 0; i < lfjets.size(); ++i) {
+          ht_lfjets = ht_lfjets + lfjets[i].pT();
+      }
+
       FourMomentum bb_closest = bjets[ind1].momentum() + bjets[ind2].momentum();
       double dr_closest = deltaR(bjets[ind1], bjets[ind2]);
      
@@ -367,7 +384,11 @@ namespace Rivet {
           for (size_t i = 0; i < bjets.size(); ++i) {
               _h["all_bjets_pt_3b_geq5j_ljets"]     -> fill(bjets[i].pT()/GeV);
           }
+          for (size_t i = 0; i < lfjets.size(); ++i) {
+              _h["all_lfjets_pt_3b_geq5j_ljets"]    -> fill(lfjets[i].pT()/GeV);
+          }
           _h["ht_bjets_3b_geq5j_ljets"]             -> fill(ht_bjets/GeV);
+          _h["ht_lfjets_3b_geq5j_ljets"]            -> fill(ht_lfjets/GeV);
           // b-jet pTs
           _h["lead_bjet_pt_3b_geq5j_ljets"]         -> fill(bjets[0].pT()/GeV);
           _h["sublead_bjet_pt_3b_geq5j_ljets"]      -> fill(bjets[1].pT()/GeV);
@@ -408,7 +429,11 @@ namespace Rivet {
           for (size_t i = 0; i < bjets.size(); ++i) {
               _h["all_bjets_pt_geq4b_geq5j_ljets"]  -> fill(bjets[i].pT()/GeV);
           }
+          for (size_t i = 0; i < lfjets.size(); ++i) {
+              _h["all_lfjets_pt_geq4b_geq5j_ljets"] -> fill(lfjets[i].pT()/GeV);
+          }
           _h["ht_bjets_geq4b_geq5j_ljets"]          -> fill(ht_bjets/GeV);
+          _h["ht_lfjets_geq4b_geq5j_ljets"]         -> fill(ht_lfjets/GeV);
           // b-jet pTs
           _h["lead_bjet_pt_geq4b_geq5j_ljets"]      -> fill(bjets[0].pT()/GeV);
           _h["sublead_bjet_pt_geq4b_geq5j_ljets"]   -> fill(bjets[1].pT()/GeV);
@@ -451,7 +476,11 @@ namespace Rivet {
           for (size_t i = 0; i < bjets.size(); ++i) {
               _h["all_bjets_pt_geq4b_geq6j_ljets"]  -> fill(bjets[i].pT()/GeV);
           }
+          for (size_t i = 0; i < lfjets.size(); ++i) {
+              _h["all_lfjets_pt_geq4b_geq6j_ljets"] -> fill(lfjets[i].pT()/GeV);
+          }
           _h["ht_bjets_geq4b_geq6j_ljets"]          -> fill(ht_bjets/GeV);
+          _h["ht_lfjets_geq4b_geq6j_ljets"]         -> fill(ht_lfjets/GeV);
           // b-jet pTs
           _h["lead_bjet_pt_geq4b_geq6j_ljets"]      -> fill(bjets[0].pT()/GeV);
           _h["sublead_bjet_pt_geq4b_geq6j_ljets"]   -> fill(bjets[1].pT()/GeV);
@@ -495,7 +524,11 @@ namespace Rivet {
         for (size_t i = 0; i < bjets.size(); ++i) {
           _h["all_bjets_pt_3b_geq4j_dil"]     -> fill(bjets[i].pT()/GeV);
         }
+        for (size_t i = 0; i < lfjets.size(); ++i) {
+          _h["all_lfjets_pt_3b_geq4j_dil"]    -> fill(lfjets[i].pT()/GeV);
+        }
         _h["ht_bjets_3b_geq4j_dil"]             -> fill(ht_bjets/GeV);
+        _h["ht_lfjets_3b_geq4j_dil"]            -> fill(ht_lfjets/GeV);
         // b-jet pTs                                                                                                                                                                                     
         _h["lead_bjet_pt_3b_geq4j_dil"]         -> fill(bjets[0].pT()/GeV);
         _h["sublead_bjet_pt_3b_geq4j_dil"]      -> fill(bjets[1].pT()/GeV);
@@ -536,7 +569,11 @@ namespace Rivet {
         for (size_t i = 0; i < bjets.size(); ++i) {
           _h["all_bjets_pt_geq4b_geq4j_dil"]  -> fill(bjets[i].pT()/GeV);
         }
+        for (size_t i = 0; i < lfjets.size(); ++i) {
+          _h["all_lfjets_pt_geq4b_geq4j_dil"] -> fill(lfjets[i].pT()/GeV);
+        }
         _h["ht_bjets_geq4b_geq4j_dil"]          -> fill(ht_bjets/GeV);
+        _h["ht_lfjets_geq4b_geq4j_dil"]         -> fill(ht_lfjets/GeV);
         // b-jet pTs                                                                                                                                                                                      
         _h["lead_bjet_pt_geq4b_geq4j_dil"]      -> fill(bjets[0].pT()/GeV);
         _h["sublead_bjet_pt_geq4b_geq4j_dil"]   -> fill(bjets[1].pT()/GeV);
