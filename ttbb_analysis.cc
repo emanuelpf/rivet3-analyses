@@ -97,6 +97,7 @@ namespace Rivet {
       vector<double> m_leading_bins       = {0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345, 360, 375, 390, 405, 420, 435, 450, 480, 510, 540, 570, 600};
       vector<double> m_closest_bins       = {0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 270, 300, 330, 360, 390, 450, 510};
       vector<double> dr_bins              = {0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2, 3.4, 3.6, 3.8, 4.0, 4.4, 4.8, 5.2, 5.6, 6.0};
+      vector<double> fid_xsec_bins        = {-40, -39, -38, -37, -36, -35, -34, -33, -32, -31, -30, -29, -28, -27, -26, -25, -24, -23, -22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40};
 
       // Book histograms
       // specify custom binning
@@ -129,6 +130,7 @@ namespace Rivet {
       book(_h["m_bb_leadingVec_3b_geq5j_ljets"],     "m_bb_leadingVec_3b_geq5j_ljets"     , m_leading_bins);
       book(_h["pt_bb_leadingVec_3b_geq5j_ljets"],    "pt_bb_leadingVec_3b_geq5j_ljets"    , pt_bins);
       book(_h["dR_bb_leadingVec_3b_geq5j_ljets"],    "dR_bb_leadingVec_3b_geq5j_ljets"    , dr_bins);
+      book(_h["fid_xsec_3b_geq5j_ljets"],            "fid_xsec_3b_geq5j_ljets"            , fid_xsec_bins);
 
 
       // geq4b geq5j category 
@@ -160,6 +162,7 @@ namespace Rivet {
       book(_h["m_bb_leadingVec_geq4b_geq5j_ljets"],  "m_bb_leadingVec_geq4b_geq5j_ljets"     , m_leading_bins);
       book(_h["pt_bb_leadingVec_geq4b_geq5j_ljets"], "pt_bb_leadingVec_geq4b_geq5j_ljets"    , pt_bins);
       book(_h["dR_bb_leadingVec_geq4b_geq5j_ljets"], "dR_bb_leadingVec_geq4b_geq5j_ljets"    , dr_bins);
+      book(_h["fid_xsec_geq4b_geq5j_ljets"],         "fid_xsec_geq4b_geq5j_ljets"            , fid_xsec_bins);
 
 
       // geq4b geq6j category 
@@ -191,6 +194,7 @@ namespace Rivet {
       book(_h["m_bb_leadingVec_geq4b_geq6j_ljets"],  "m_bb_leadingVec_geq4b_geq6j_ljets"     , m_leading_bins);
       book(_h["pt_bb_leadingVec_geq4b_geq6j_ljets"], "pt_bb_leadingVec_geq4b_geq6j_ljets"    , pt_bins);
       book(_h["dR_bb_leadingVec_geq4b_geq6j_ljets"], "dR_bb_leadingVec_geq4b_geq6j_ljets"    , dr_bins);
+      book(_h["fid_xsec_geq4b_geq6j_ljets"],         "fid_xsec_geq4b_geq6j_ljets"            , fid_xsec_bins);
 
 
       // dilepton
@@ -222,6 +226,7 @@ namespace Rivet {
       book(_h["m_bb_leadingVec_3b_geq4j_dil"],     "m_bb_leadingVec_3b_geq4j_dil"     , m_leading_bins);
       book(_h["pt_bb_leadingVec_3b_geq4j_dil"],    "pt_bb_leadingVec_3b_geq4j_dil"    , pt_bins);
       book(_h["dR_bb_leadingVec_3b_geq4j_dil"],    "dR_bb_leadingVec_3b_geq4j_dil"    , dr_bins);
+      book(_h["fid_xsec_3b_geq4j_dil"],            "fid_xsec_3b_geq4j_dil"            , fid_xsec_bins);
 
 
       // geq4b geq4j category                                                                                                                                                                                                                                                                                   
@@ -253,6 +258,9 @@ namespace Rivet {
       book(_h["m_bb_leadingVec_geq4b_geq4j_dil"],  "m_bb_leadingVec_geq4b_geq4j_dil"     , m_leading_bins);
       book(_h["pt_bb_leadingVec_geq4b_geq4j_dil"], "pt_bb_leadingVec_geq4b_geq4j_dil"    , pt_bins);
       book(_h["dR_bb_leadingVec_geq4b_geq4j_dil"], "dR_bb_leadingVec_geq4b_geq4j_dil"    , dr_bins);
+      book(_h["fid_xsec_geq4b_geq4j_dil"],         "fid_xsec_geq4b_geq4j_dil"            , fid_xsec_bins);
+
+      book(_h["fid_xsec_geq1lep"],                 "fid_xsec_geq1lep"                    , fid_xsec_bins);
 
       // (abs) weight histos
       // book(_h["abs_weight_1000_3b_geq5j_ljets"],    "abs_weight_1000_3b_geq5j_ljets",    1400, 0.0, 1400.0);
@@ -321,6 +329,7 @@ namespace Rivet {
       bool pass_dil   = (leptons.size() == 2 && leptons[0].pT() > 27*GeV && leptons[1].pT() > 27*GeV);
 
       if (!(pass_ljets || pass_dil)) vetoEvent;
+      _h["fid_xsec_geq1lep"] -> fill(event.weights()[0]);
       if (nbjets < 3 || njets < 4)  vetoEvent;
      
       // fill histogram with leading b-jet pT
@@ -416,6 +425,7 @@ namespace Rivet {
           // average dR
           _h["dR_bb_average_3b_geq5j_ljets"]        -> fill(sum_dr/sum_n_dr);
 
+          _h["fid_xsec_3b_geq5j_ljets"]           -> fill(event.weights()[0]);
           // _h["abs_weight_1000_3b_geq5j_ljets"] -> fill(event.weights()[0]);
           // _h["abs_weight_100_3b_geq5j_ljets"]  -> fill(event.weights()[0]);
           // _h["abs_weight_5_3b_geq5j_ljets"]    -> fill(event.weights()[0]);
@@ -463,6 +473,7 @@ namespace Rivet {
           // average dR
           _h["dR_bb_average_geq4b_geq5j_ljets"]     -> fill(sum_dr/sum_n_dr);
 
+          _h["fid_xsec_geq4b_geq5j_ljets"]           -> fill(event.weights()[0]);
           // _h["abs_weight_1000_geq4b_geq5j_ljets"] -> fill(event.weights()[0]);
           // _h["abs_weight_100_geq4b_geq5j_ljets"]  -> fill(event.weights()[0]);
           // _h["abs_weight_5_geq4b_geq5j_ljets"]    -> fill(event.weights()[0]);
@@ -510,6 +521,7 @@ namespace Rivet {
           // average dR
           _h["dR_bb_average_geq4b_geq6j_ljets"]     -> fill(sum_dr/sum_n_dr);
 
+          _h["fid_xsec_geq4b_geq6j_ljets"]          -> fill(event.weights()[0]);
           // _h["abs_weight_1000_geq4b_geq6j_ljets"] -> fill(event.weights()[0]);
           // _h["abs_weight_100_geq4b_geq6j_ljets"]  -> fill(event.weights()[0]);
           // _h["abs_weight_5_geq4b_geq6j_ljets"]    -> fill(event.weights()[0]);
@@ -556,6 +568,7 @@ namespace Rivet {
         // average dR                                                                                                                                                                                     
         _h["dR_bb_average_3b_geq4j_dil"]        -> fill(sum_dr/sum_n_dr);
 
+        _h["fid_xsec_3b_geq4j_dil"]           -> fill(event.weights()[0]);
         // _h["abs_weight_1000_3b_geq4j_dil"] -> fill(event.weights()[0]);
         // _h["abs_weight_100_3b_geq4j_dil"]  -> fill(event.weights()[0]);
         // _h["abs_weight_5_3b_geq4j_dil"]    -> fill(event.weights()[0]);
@@ -603,6 +616,7 @@ namespace Rivet {
         // average dR                                                                                                                                                                                     
         _h["dR_bb_average_geq4b_geq4j_dil"]     -> fill(sum_dr/sum_n_dr);
 
+        _h["fid_xsec_geq4b_geq4j_dil"]          -> fill(event.weights()[0]);
         // _h["abs_weight_1000_geq4b_geq4j_dil"] -> fill(event.weights()[0]);
         // _h["abs_weight_100_geq4b_geq4j_dil"]  -> fill(event.weights()[0]);
         // _h["abs_weight_5_geq4b_geq4j_dil"]    -> fill(event.weights()[0]);
